@@ -4,8 +4,6 @@ jobs:
   build:
     docker:
       - image: cimg/base:current
-      - setup_remote_docker:
-          version: 20.10.14
     working_directory: ~/app
     environment:
       NODE_ENV: development
@@ -15,6 +13,11 @@ jobs:
       DOCKER_PASSWORD: $DOCKER_PASSWORD
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 20.10.14
+      - run:
+          name: Install dependencies
+          command: echo "No need to install anything. \n Just build and push the Docker image."
       - run:
           name: Build and push Docker image
           command: |
