@@ -7,10 +7,10 @@ jobs:
     working_directory: ~/app
     environment:
       NODE_ENV: development
-      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-      AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-      DOCKER_USERNAME: $DOCKER_USERNAME
-      DOCKER_PASSWORD: $DOCKER_PASSWORD
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      DOCKER_USERNAME: DOCKER_USERNAME
+      DOCKER_PASSWORD: DOCKER_PASSWORD
     steps:
       - checkout
       - setup_remote_docker:
